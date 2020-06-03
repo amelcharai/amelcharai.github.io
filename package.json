@@ -1,0 +1,27 @@
+{
+  "name": "amelcharai.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "like_button.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amelcharai/amelcharai.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amelcharai/amelcharai.github.io/issues"
+  },
+  "homepage": "https://github.com/amelcharai/amelcharai.github.io#readme",
+  "dependencies": {
+    "terser": "^4.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify": "npx terser -c -m -o like_button.min.js -- like_button.js",
+    "stage-all": "git add .",
+    "commit-no-message": "git commit -a --allow-empty-message -m ''",
+    "autopush": "npm run stage-all && npm run commit-no-message && git push"
+  }
+}
